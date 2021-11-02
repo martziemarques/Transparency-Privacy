@@ -1,0 +1,545 @@
+/*Marta Marques, up201808066*/
+
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+/* importar fonte variavel */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@1,125,900&display=swap');
+
+
+* {
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+    font-stretch: 100%;
+    box-sizing: border-box;
+  }
+
+
+
+html,
+body {
+    margin: 0px;
+    background-color: rgb(14, 13, 13);
+    font-family: 'Archivo', sans-serif;
+    text-align: center;
+    
+  }
+
+
+
+/* janela que ocupa todo o ecra */
+
+.popup {
+  z-index: 2;
+  background-color: #8cd36a;
+  position: relative;
+  display: flex; 
+  opacity: 1; 
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+ 
+  
+/* botao da janela */
+
+    }
+    .popup span {
+      background: black;
+      /* opacity: 0.5; */
+      /* width: fit-content; */
+      color:white;
+      font-weight: bold;
+      /* height: fit-content; */
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border-radius: 50%;
+      /* width: 20px; */
+      /* height: 22px; */
+      cursor: pointer;
+      padding: 3px 6px;
+    }
+   
+    .popup p {
+        text-align: center;
+        margin-top: 14vw;
+        margin-left: 4vw;
+        margin-right: 4vw;
+      color: balck;
+      font-size: 8vw;
+      font-weight: 700;
+      animation: popup 2s linear infinite;
+    transition: trasition 0.2s ease-in-out;
+    }
+
+
+
+    @media only screen and (max-width: 600px) {
+
+      .popup p{
+
+        margin-top: 65vw; 
+        
+      }
+    }
+
+
+/* animação do texto do popup */
+
+  @keyframes popup {
+    0%{
+        font-style: normal;
+        
+    }
+
+    50%{
+      font-style: italic;
+     
+   }
+
+   100%{
+      font-style: normal;
+       
+
+   }
+  }
+
+  .principal {
+    display: block;
+  }
+
+ 
+/* janela pequena no canto esquerdo da pagina */
+
+  #window  {
+     
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 5vw;
+    margin-top: 5vw;
+    width: 15vw;
+    height: 8vw;
+    background-color: #8cd36a;
+   
+    
+ 
+}
+@media only screen and (max-width: 600px) {
+
+  #window{
+     
+    
+   text-align: center;
+   border-radius: 10px;
+   margin-left: 10.8vw;
+   margin-top: 20vw;
+   padding-bottom: 1vw;
+   width: 80vw;
+   height: 25vw;
+   background-color: #8cd36a;
+  
+    
+  }
+}
+
+#window p {
+   /*  position: fixed; */
+   font-size: 1.3vw;
+   padding-top: 3.5vw;
+   padding-bottom: 2vw;
+   text-align: center;
+   color: black;
+ 
+}
+
+@media only screen and (max-width: 600px) {
+
+  #window p{
+    font-size: 6vw;
+    padding-top: 9vw;
+    padding-bottom: 2vw;
+    text-align: center;
+    color: black;
+    
+  }
+}
+
+
+
+
+/* botao que muda weight */
+.button {    
+
+    background-color:#8cd36a;
+    border: black 2px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 15vw;
+    height: 2vw;
+    margin-top: 2vw;
+    font-size: 0.9;
+    font-weight: 700;
+    font-style: normal;
+    
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .button{
+      background-color:#8cd36a;
+      border: black 2px;
+      border-style: solid;
+      text-align: center;
+      border-radius: 10px;
+      margin-top: 11vw;
+      width: 80vw;
+      height: 8vw;
+      margin-bottom: 10vw;
+      font-size: 4vw;
+      font-weight: 600;
+     
+      
+    }
+  }
+
+  .button p {    
+    color:black;
+    text-align: left;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+
+  }
+
+
+
+
+/* janela pequena no lado direito da pagina */
+
+#window2  {
+    /*  position: fixed; */
+    z-index: 5;
+    position: absolute;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 78vw;
+    margin-right: 5vw;
+    margin-top: 20vw;
+    width: 16vw;
+    height: 3vw;
+    background-color:#9cdcfe;
+  
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  #window2 {
+    margin-left: 11vw;
+    width: 80vw;
+    height: 10vw;
+    margin-top: 40vw;
+    margin-bottom: 80vw;  
+  }
+}
+
+
+#window2 p {
+  /*  position: fixed; */
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1vw;
+  padding-top: 5px;
+  text-align: center;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #window2 p {
+
+    font-size: 3.5vw;
+    
+  }
+}
+
+/*  imagem do cursor caixa do lado direito */
+
+img {
+  height: 1vw;
+  width: 1vw;
+}
+
+@media only screen and (max-width: 600px) {
+
+ img {
+  height: 3vw;
+  width: 3vw;
+    
+  }
+}
+
+
+
+/* espeaço da palavra Transparency */
+
+  #transparency {
+      
+    margin-top: 15vw;
+    margin-bottom: 10vw;
+ 
+}
+
+@media only screen and (max-width: 600px) {
+
+  #transparency {
+    margin-top: 80vw;
+    
+    
+  }
+}
+  
+/* palavra transparency */
+
+  h1 {
+   
+      text-align: center;
+      color: white;
+      font-size: 5vw;
+      font-weight: 600;
+      animation: change 5s linear infinite;
+      transition: trasition 0.2s ease-in-out;
+    
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    h1 {
+      font-size: 15vw;
+      padding-top: 20vw;
+    }
+  }
+    
+
+ /* animação da palavra transparency */
+
+  @keyframes change {
+      0%{
+          font-size: 5vw;
+          letter-spacing: 1px;
+      }
+ 
+      50%{
+         font-size: 6vw;
+         letter-spacing: 1,2px;
+     }
+ 
+     100%{
+         font-size: 5vw;
+         letter-spacing: 1px;
+
+     }
+    }
+
+  /*  media querie da animação */
+
+    @media only screen and (max-width: 600px) {
+
+      @keyframes change {
+        0%{
+            font-size: 8vw;
+            letter-spacing: 1px;
+        }
+   
+        50%{
+           font-size: 9vw;
+           letter-spacing: 1,2px;
+       }
+   
+       100%{
+           font-size: 8vw;
+           letter-spacing: 1px;
+  
+       }
+      }
+    }
+
+
+
+/* espaço que ocupa a palavra Privacy */
+
+    .privacy{
+        
+        position: relative;
+        margin-top: 30vw;
+        margin-bottom: 25vw;
+     
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      .privacy {
+        margin-top: 60vw;
+      }
+    }
+      
+
+  
+
+/* palavra privacy */
+
+#teste {
+    color: white;
+    font-size: 5vw;
+    font-weight: 500;
+    letter-spacing: 0.7vw;
+    padding-bottom: 20vw;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  #teste {
+    font-size: 10vw;
+    padding-top: 60vw;
+    padding-bottom: 40vw;
+  }
+}
+
+
+/* Caixa de texto da password */
+#password {
+ 
+   z-index: 5;
+   position: absolute;
+   text-align: center;
+   border-radius: 10px;
+   margin-left: 78vw;
+   margin-right: 5vw;
+   margin-top: 35vw;
+   width: 16vw;
+   height: 10vw;
+   background-color:#9cdcfe;
+  
+  
+}
+
+@media only screen and (max-width: 600px) {
+
+  #password {
+    
+   font-size: 3.5vw;
+   text-align: center;
+   border-radius: 10px;
+   margin-left: 19vw;
+   margin-top: 35vw;
+   padding-bottom: 10vw;
+   width: 60vw;
+   height: 25vw;
+   background-color: #9cdcfe;
+    
+  }
+}
+
+ 
+#password p {
+ 
+  padding: 1vw;
+  font-size: 1.2vw;
+  font-weight: 400;
+  text-align: left;
+  color: black;
+ 
+  
+ 
+ }
+
+
+ @media only screen and (max-width: 600px) {
+
+  #password p {
+    
+    font-size: 3vw;
+    padding-top: 4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    
+  }
+}
+
+/* span da definiçao de password */
+
+ span {
+ 
+  font-style: italic;
+    font-weight: 700;
+
+   }
+
+
+
+/* "colophon" */
+
+.fim  {
+
+ margin-top: 30vw;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .fim p {
+    
+   margin-bottom: 5vw;
+    
+  }
+}
+
+.fim p {
+  /*  position: fixed; */
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1vw;
+  margin-top: 10vw;
+  margin-bottom: 8vw;
+  line-height: 1.5vw;
+  text-align: center;
+  color: white;
+
+ 
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .fim p {
+    
+    font-size: 2vw;
+    line-height: 4vw;
+    font-style: normal;
+      
+  }
+}
+
+
